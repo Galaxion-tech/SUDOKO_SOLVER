@@ -99,14 +99,14 @@ def sudo_solver_2():  # helper sudo solver, run when main_lst have more than one
                         return 1
 
 
-# _main_
-print("-------------------------PROBLEM---------------------------".center(150))
-print("\n")
-for i in sudo:
-    print(" "*60, i)
-print("\n")
-sudo_solver()
-print("-------------------------SOLUTION---------------------------".center(150))
-print("\n")
-for i in sudo:
-    print(" "*60, i)
+if __name__ == "__main__":
+    print('{:-^60}'.format('PROBLEM').center(150))
+    print("\n")
+    for i in sudo:
+        print(" "*60, i)
+    print("\n")
+    sudo_solver()
+    print('{:-^59}'.format('SOLUTION').center(150))
+    print("\n")
+    for i in sudo:
+        print(" "*60, i)
