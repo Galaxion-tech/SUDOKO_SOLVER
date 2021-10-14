@@ -1,4 +1,6 @@
 from copy import deepcopy
+from print_board import print_board
+
 # j= 0,1,2,3,4,5,6,7,8
 sudo = [[0, 0, 0, 0, 6, 0, 0, 0, 0],  # i=0
         [0, 5, 0, 0, 0, 0, 2, 0, 0],  # i=1
@@ -101,12 +103,8 @@ def sudo_solver_2():  # helper sudo solver, run when main_lst have more than one
 
 if __name__ == "__main__":
     print('{:-^60}'.format('PROBLEM').center(150))
-    print("\n")
-    for i in sudo:
-        print(" "*60, i)
+    print_board(sudo, offset=63)
     print("\n")
     sudo_solver()
     print('{:-^59}'.format('SOLUTION').center(150))
-    print("\n")
-    for i in sudo:
-        print(" "*60, i)
+    print_board(sudo, offset=63)
